@@ -4,7 +4,7 @@ class User < ApplicationRecord
         validates :avatar, presence: true
         validates :cover_image, presence: true
       
-        has_many :opinions, class_name: 'Opinion', foreign_key: 'user_id'
+        has_many :comments, class_name: 'Comment', foreign_key: 'user_id'
         has_many :relationship, class_name: 'Following', foreign_key: 'user_id', dependent: :destroy
         has_many :followings, through: :relationship
       

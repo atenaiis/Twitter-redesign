@@ -8,9 +8,70 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Handy gossy</title>
+    <meta name="twitter:card" value="summary"/>
+    <meta property="og:image" content="http://i6.tagstat.com/p1/0/4nY5gwDZZhVm3HqGo91PButn0lVAHnT1s9-6m365d9KVxC5x8b7ckh-ZYABvOzTe.jpg" />
+    <meta property="og:title" content="Talkhey"/>
+    <meta property="og:description" content="This Project is an app built using Ruby on Rails basic functionalities of a social network similar to Twitter but using a different interface." />
+    <meta property="og:url" content="" />
+
   </head>
 
-  <body>
-    <%= yield %>
+  
+  </head>
+
+  <body class="">
+    <!--FLASH-->
+    <div class="row">
+      <div class="col-12">
+        
+      </div>
+    </div>
+
+    <div class="row">  
+      <div class="col-sm-12 col-lg-2 col-md-4 w-100 left-menu d-none d-md-block">
+        <!--SIDE-->
+        <section class="w-100 h-100">
+          <div class="sticky-top">
+            
+          </div>
+        </section>
+      </div>
+      <!--BLUE NAVBAR AND CONTENT-->
+      <div class="col-lg-10 col-md-8 col-sm-12 w-100"> 
+          <!--NAVBAR BLUE-->
+          <nav class="row nav">
+            <div class="col-12 w-100">
+              <div class= "d-flex align-items-center justify-content-between">
+                <div class = "p-2">
+                  
+                </div>
+                
+              </div>
+            </div>
+          </nav>
+
+
+          <!--CONTENT-->
+          <div class="col-12">
+            <section class="row">
+              <%= yield %>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="row ">
+      <div class="col-12 mt-4 ">
+        <div class="d-flex flex-column align-items-center">
+          <%= link_to image_tag('gossyp.jpg', alt: 'Logo', class: 'img'), users_path %> <br>
+          <p class="title"> Handy gossy</p><br>
+          <p class="subtitle"> Created: April - 2021 </p><br>
+          <p class="subtitle m-4 p-2">By: Atenais Campos</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

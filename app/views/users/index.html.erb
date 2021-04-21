@@ -1,25 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row mt-2">
 
-<h1>Users</h1>
+    <!--PEOPLE-->
+    <div class="col-lg-9 col-md-12 col-sm-12">
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <!--MENU GOTO WHITE-->
+      <%= display_goto_menu %>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <!--TWEETS-->
+      <div class="row mt-2">
+        <div class="col-12">
+          <%= render 'talk', comment: @comment %>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class= "col-12">   
+          <%= display_userlist %>      
+        </div>
+      </div>
+    </div>
 
-<br>
-
-<%= link_to 'New User', new_user_path %>
+    <!--FOLLOWED BY-->
+    <div class="col-lg-3 col-md-12 col-sm-12">
+      <div class="row p-2">
+        <p class="m-auto">WHO TO FOLLOW</p>
+      </div>
+      <%= whotofollow %>
+    </div>
+  </div>
+</div>

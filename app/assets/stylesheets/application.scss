@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
+  .img {
+    width: 60px;
+    height: 60px;
+    max-width: 70px;
+    max-height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center center;
+  }
