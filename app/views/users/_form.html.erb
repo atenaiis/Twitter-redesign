@@ -1,13 +1,8 @@
 <%= form_with(model: user, local: true) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-        <% user.errors.full_messages.each do |message| %>
-          <%= message %>
-        <% end %>
-    </div>
-  <% end %>
-
+  <div class="field">
+    <%= form.label :full_name %>
+    <%= form.text_field :full_name %>
+  </div>
 
   <div class="field">
     <%= form.label :username %>
@@ -15,11 +10,16 @@
   </div>
 
   <div class="field">
-    <%= form.label :fullname %>
-    <%= form.text_field :fullname %>
+    <%= form.label :photo %>
+    <%= form.text_field :photo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cover_image %>
+    <%= form.text_field :cover_image %>
   </div>
 
   <div class="actions">
-    <%= form.submit 'Create account', class: 'btn-blue' %>
+    <%= form.submit %>
   </div>
 <% end %>

@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
-  resources :comments
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :users, except: %i[:destroy, :edit]
-  resources :followings, only: [:create, :destroy, :new]
-  root to: 'comments#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get '/startfollow/:id', to: 'followings#create'
-  get 'login' => 'sessions#new'
+  root 'users#profile'
+
+  get '/signup', to: 'users#new'
+  post '/signup', to: 'users#create'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
   get 'logout' => 'sessions#destroy'
-  get '/follow/:list', to: 'users#index'
+  post '/logout', to: 'sessions#destroy'
+  resources :users, only: ['show', 'destroy']
+  get '/users/:id/follow', to: 'users#follow', as: 'follow'
+  get '/users/:id/unfollow', to: 'users#unfollow', as: 'unfollow'
+
+  resources :opinions, only: ['create']
 end
+

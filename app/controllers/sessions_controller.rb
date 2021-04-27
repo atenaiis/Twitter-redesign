@@ -1,21 +1,27 @@
 class SessionsController < ApplicationController
-  include FollowingsHelper
-  def new; end
+    include SessionsHelper
 
-  def create
-    user = User.find_by(username: params[:username])
-    if user.nil?
-      flash.now.alert = 'Login failed'
-      render action: :new
-    else
-      session[:name] = user.fullname
-      session[:username] = user.username
-      redirect_to(:users, notice: 'Sign In Succesful.')
+    before_action :require_logout, only: %w[new create]
+  
+    def new
+      render 'auth/login', layout: false
+    end
+  
+    def create
+      username = params[:username].presence
+      user = username.nil? ? nil : User.find_by(username: username)
+  
+      if user
+        login(user)
+        redirect_to root_path
+      else
+        redirect_back fallback_location: '/', alert: 'User not found'
+      end
+    end
+  
+    def destroy
+      logout
+      redirect_to login_path
     end
   end
-
-  def destroy
-    logout
-    redirect_to(:users, alert: 'Logged out!')
-  end
-end
+  
