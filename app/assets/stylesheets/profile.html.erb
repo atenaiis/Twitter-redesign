@@ -5,7 +5,7 @@
 
 <div class="content-pan">
   <div class="pan-heading">
-    <h4>Write a post!!</h4>
+    <h4>Write something</h4>
   </div>
   <div class="pan-content">
     <%= form_with(url: opinions_path) do |form| %>
@@ -21,11 +21,11 @@
   <div class="pan-content">
     <% @opinions.each do |opinion| %>
       <div class="opinion">
-        <div class="post-img ">
+        <div class="post-img">
           <img
-          src="<%= asset_url(@user.photo_url) %>"
+            
             alt="Profile picture"
-            class="img-responsive follower-img "
+            class="img-responsive follower-img"
           />
         </div>
         <div class="post-content">

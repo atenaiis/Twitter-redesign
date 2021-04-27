@@ -1,6 +1,6 @@
 <nav class="nav col-12">
 <div class = "p-2">
-<i class="fas fa-people-carry"></i> <br>
+<i class="fas fa-people-carry plogo"></i> <br>
 </div>
 
   <ul class="nav-items">
@@ -9,8 +9,6 @@
       <div >
         <%= link_to 'Home', root_path, class: 'drop-item' %>
         <%= link_to 'Logout', logout_path, method: :post, class: 'drop-item' %></br>
-        <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' } %>
-       
         </div>
     </li>
   </ul>
