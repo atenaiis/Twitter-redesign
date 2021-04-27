@@ -53,6 +53,12 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # Rspec test
+  gem 'rspec-rails', '~> 4.0.1'
+  # Hirb provides a mini view framework for console applications
+  gem 'hirb', '~> 0.7.3'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
