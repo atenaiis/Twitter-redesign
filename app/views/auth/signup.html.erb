@@ -15,7 +15,7 @@
       <div class="left col-6"></div>
       <div class="right col-6">
         <div class="registration-form">
-        <i class="fas fa-people-carry"></i>
+        <i class="fas fa-people-carry tlogo"></i>
           <%= form_with(multipart: true, model: @user, url: signup_path) do |form| %>
             <%= form.text_field :full_name, placeholder: "Full name (e.g. John Doe)" %>
             
