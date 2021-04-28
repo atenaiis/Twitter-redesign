@@ -23,7 +23,7 @@ module UsersHelper
     return if user == logged_user
 
     link_to(following_action_path(user)) do
-      ('<i class="fa ' + action_icon(user) + '"></i>').html_safe
+      "<i class=\"fa #{action_icon(user)}\"></i>".html_safe
     end
   end
 

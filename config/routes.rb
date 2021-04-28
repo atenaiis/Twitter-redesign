@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'users#profile'
 
@@ -7,10 +9,9 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get 'logout' => 'sessions#destroy'
   post '/logout', to: 'sessions#destroy'
-  resources :users, only: ['show', 'destroy']
+  resources :users, only: %w[show destroy]
   get '/users/:id/follow', to: 'users#follow', as: 'follow'
   get '/users/:id/unfollow', to: 'users#unfollow', as: 'unfollow'
 
   resources :opinions, only: ['create']
 end
-
