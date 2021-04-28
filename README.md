@@ -11,6 +11,20 @@ The project consisted of creating an MVP of an app that works similar to Twitter
 - Users can unfollow other users.
 - Users can add a profile photo and a profile cover image
 
+## You can access the social media [HERE](https://dry-sierra-52143.herokuapp.com/)
+
+## login/ sign up 
+
+![log in / sign up](./app/assets/images/1.png)
+
+##  sign up 
+
+![log in / sign up](./app/assets/images/2.png)
+
+##  layout
+
+![log in / sign up](./app/assets/images/3.png)
+
 ## Built With
 
 - Ruby (version 2.7.2)
@@ -30,6 +44,9 @@ Clone the repository to your machine and cd into the directory
 Use the following command to start the rails server then visit: http://localhost:3000 to use the app
 
 - rails s
+
+
+
 
 ## Authors
 
