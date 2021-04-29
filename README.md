@@ -11,6 +11,9 @@ The project consisted of creating an MVP of an app that works similar to Twitter
 - Users can unfollow other users.
 - Users can add a profile photo and a profile cover image
 
+Design: [Twitter Redesign](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details), by [Gregoire Vella](https://www.behance.net/gregoirevella)
+
+
 ## You can access the social media [HERE](https://dry-sierra-52143.herokuapp.com/)
 
 ## login/ sign up 
@@ -40,7 +43,9 @@ Clone the repository to your machine and cd into the directory
 
 - git clone git@github.com:atenaiis/Twitter-redesign.git
 - cd Twitter-redesign
+- rails db:create
 - rails db:migrate
+- rails s
 Use the following command to start the rails server then visit: http://localhost:3000 to use the app
 
 - rails s

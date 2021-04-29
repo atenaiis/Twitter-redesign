@@ -3,14 +3,11 @@ require_relative '../rails_helper'
 RSpec.describe User, type: :model do
   context 'Validation tests' do
     it 'validates attributes - invalid' do
-      User.new(full_name: '', username: '', photo: '', cover_image: '')
+      user = User.new(full_name: '', username: '', photo: '', cover_image: '')
       expect(user.valid?).to be(false)
     end
+   end
 
-    it 'validates attributes - valid' do
-      User.new(full_name: 'galilea', username: 'zably')
-    end
-  end
   context 'Association tests' do
     it 'has many opinions' do
       assc = User.reflect_on_association(:opinions)
