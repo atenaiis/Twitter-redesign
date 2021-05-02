@@ -6,7 +6,7 @@
     <div class="user-profile-image col-4">
       <a href="#">
         <img
-     
+        src="<%= asset_url(@user.photo_url) %>"
           alt="Profile picture"
         />
       </a>
@@ -50,7 +50,7 @@
           <div class="follower">
             <a href="#" class="follower-img no-decor">
               <img
-                src="<%= asset_url(@user.photo_url) %>"
+              src="<%= asset_url(follower.photo_url) %>"
                 alt="Profile picture"
                 class="img-responsive follower-img"
               />
