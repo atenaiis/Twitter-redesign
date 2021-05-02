@@ -6,7 +6,7 @@ ruby '2.7.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 
-gem 'pg', '~> 1.2', '>= 1.2.3' 
+gem 'pg', '~> 1.2', '>= 1.2.3'
 # Use Puma as the app server
 gem 'carrierwave', '~> 2.0'
 gem 'puma', '~> 5.0'
@@ -46,15 +46,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
 group :development, :test do
   gem 'database_cleaner'
- 
 end
 
-group :test do
-  gem 'capybara', '>= 3.26'
-  gem 'selenium-webdriver'
-end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'

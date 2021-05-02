@@ -30,7 +30,7 @@ module UsersHelper
   def follow_action(user)
     return if user == logged_user
 
-    ('<a href="' + following_action_path(user) +
+    ('<a href="' + following_action_path(user) + # rubocop:todo Style/StringConcatenation
       '" class="follower-follow no-decor ' + followed(user) + '">' \
       '<i class="fa ' + action_icon(user) + '"></i>' \
     '</a>').html_safe

@@ -6,7 +6,7 @@ RSpec.describe User, type: :model do
       user = User.new(full_name: '', username: '', photo: '', cover_image: '')
       expect(user.valid?).to be(false)
     end
-   end
+  end
 
   context 'Association tests' do
     it 'has many opinions' do
