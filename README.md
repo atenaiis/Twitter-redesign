@@ -13,6 +13,23 @@ The project consisted of creating an MVP of an app that works similar to Twitter
 
 Design: [Twitter Redesign](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details), by [Gregoire Vella](https://www.behance.net/gregoirevella)
 
+## N+1 Problem
+
+In the application, each User has a collection of Followings objects. Another way to say this is:
+
+- User → Following is a one-to-many relationship.
+And then each Following has a User who is being followed by a given User.
+
+In other words, you have one select for the Followings, and then N additional selects, where N is the total number of other users followed.
+
+an example of this in the application is in the `users_controller.rb`
+
+```ruby
+def show
+  @user = User.includes(followers: :follower, followings: :followed).find(@user.id)
+  # ...
+end
+```
 
 ## You can access the social media [HERE](https://dry-sierra-52143.herokuapp.com/)
 
@@ -67,8 +84,13 @@ Use the following command to start the rails server then visit: http://localhost
 
 Contributions, issues and feature requests are welcome!
 
+## Acknowledgments
+
+- [Microverse](https://www.microverse.org/)
+- [Gregoire Vella](https://www.behance.net/gregoirevella)
 
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
