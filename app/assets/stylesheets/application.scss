@@ -24,12 +24,6 @@ html {
   box-sizing: border-box;
 }
 
-*,
-:before
-:after {
-  box-sizing: inherit;
-}
-
 .container {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -154,5 +148,4 @@ html {
   max-height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center center;
-}
+  object-position: center center; }
