@@ -32,15 +32,15 @@ html {
 
 .container {
   display: grid;
-  grid-template-columns:repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 15px;
   margin: 0 auto;
 }
 
 .container-fluid {
   display: grid;
-  grid-template-columns:repeat(12, minmax(0, 1fr));
-  grid-gap:15px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 15px;
   margin: 0 auto;
   width: 100%;
 }
@@ -155,4 +155,4 @@ html {
   border-radius: 50%;
   object-fit: cover;
   object-position: center center;
-}
+}}
