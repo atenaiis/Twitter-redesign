@@ -22,7 +22,7 @@
 }
 
 .cover > img {
-  width: 100%;
+  width: fit-content;
 }
 
 .content {
