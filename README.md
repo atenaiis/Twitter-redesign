@@ -87,7 +87,7 @@ Contributions, issues and feature requests are welcome!
 ## Acknowledgments
 
 - [Microverse](https://www.microverse.org/)
-- [Gregoire Vella](https://www.behance.net/gregoirevella)
+- [Gregoire Vella](https://www.behance.net/gregoirevella): for the design"
 
 
 ## Show your support
