@@ -1,0 +1,142 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 15px;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.grid {
+  grid-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.col-1 {
+  grid-column-start: span 1;
+}
+
+.col-2 {
+  grid-column-start: span 2;
+}
+
+.col-3 {
+  grid-column-start: span 3;
+}
+
+.col-4 {
+  grid-column-start: span 4;
+}
+
+.col-5 {
+  grid-column-start: span 5;
+}
+
+.col-6 {
+  grid-column-start: span 6;
+}
+
+.col-7 {
+  grid-column-start: span 7;
+}
+
+.col-8 {
+  grid-column-start: span 8;
+}
+
+.col-9 {
+  grid-column-start: span 9;
+}
+
+.col-10 {
+  grid-column-start: span 10;
+}
+
+.col-11 {
+  grid-column-start: span 11;
+}
+
+.col-12 {
+  grid-column-start: span 12;
+}
+
+.row-1 {
+  grid-row-start: span 1;
+}
+
+.row-2 {
+  grid-row-start: span 2;
+}
+
+.row-3 {
+  grid-row-start: span 3;
+}
+
+.row-4 {
+  grid-row-start: span 4;
+}
+
+.row-5 {
+  grid-row-start: span 5;
+}
+
+.row-6 {
+  grid-row-start: span 6;
+}
+
+.row-7 {
+  grid-row-start: span 7;
+}
+
+.row-8 {
+  grid-row-start: span 8;
+}
+
+.row-9 {
+  grid-row-start: span 9;
+}
+
+.row-10 {
+  grid-row-start: span 10;
+}
+
+.row-11 {
+  grid-row-start: span 11;
+}
+
+.row-12 {
+  grid-row-start: span 12;
+}
